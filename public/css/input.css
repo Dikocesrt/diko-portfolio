@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary-pink: #ff7d6b;
+    --font-poppins: "Poppins", sans-serif;
+}
