@@ -49,7 +49,7 @@ const Experience = sequelize.define(
         isStar: {
             type: DataTypes.BOOLEAN,
             field: "is_star",
-            allowNull: true,
+            defaultValue: false,
         },
         experienceCategoryId: {
             type: DataTypes.UUID,

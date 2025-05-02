@@ -10,7 +10,10 @@ const Skill = sequelize.define(
             defaultValue: DataTypes.UUIDV4,
         },
         name: DataTypes.STRING,
-        image: DataTypes.STRING,
+        image: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         color: {
             type: DataTypes.STRING,
             allowNull: true,
@@ -18,7 +21,7 @@ const Skill = sequelize.define(
         category: DataTypes.ENUM("softskill", "hardskill", "softwareskill"),
         isStar: {
             type: DataTypes.BOOLEAN,
-            allowNull: true,
+            defaultValue: false,
             field: "is_star",
         },
     },

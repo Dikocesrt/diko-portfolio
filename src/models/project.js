@@ -18,7 +18,7 @@ const Project = sequelize.define(
         isStar: {
             type: DataTypes.BOOLEAN,
             field: "is_star",
-            allowNull: true,
+            defaultValue: false,
         },
         experienceId: {
             type: DataTypes.UUID,
