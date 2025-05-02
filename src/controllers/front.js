@@ -54,6 +54,7 @@ const showFront = async (req, res) => {
         });
 
         res.render("front", {
+            isFront: true,
             experiences: plainExperiences,
             projects: plainProjects,
             skills: plainSkills,
