@@ -33,3 +33,7 @@ const showExperiences = async (req, res) => {
         console.log("SHOW LIST ERROR => " + error);
     }
 };
+
+module.exports = {
+    showExperiences,
+};

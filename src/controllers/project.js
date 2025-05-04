@@ -66,3 +66,7 @@ const showProjects = async (req, res) => {
         console.log("SHOW PROJECTS ERROR => " + error);
     }
 };
+
+module.exports = {
+    showProjects,
+};

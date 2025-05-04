@@ -63,3 +63,7 @@ const showFront = async (req, res) => {
         console.log("SHOW FRONT ERROR ==> " + error);
     }
 };
+
+module.exports = {
+    showFront,
+};
