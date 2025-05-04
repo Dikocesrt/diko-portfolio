@@ -1,5 +1,5 @@
 const { Experience } = require("../models/association");
-const getURL = require("../helper/getCloudinary");
+const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
 
 const showExperiences = async (req, res) => {

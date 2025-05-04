@@ -1,5 +1,5 @@
 const { Experience, Project, Skill } = require("../models/association");
-const getURL = require("../helper/getCloudinary");
+const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
 
 const showFront = async (req, res) => {

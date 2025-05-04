@@ -1,11 +1,11 @@
 const Project = require("./project");
 const Documentation = require("./documentation");
-const ProjectCategory = require("./project_category");
-const ExperienceCategory = require("./experience_category");
-const ProjectSkill = require("./project_skill");
+const ProjectCategory = require("./projectCategory");
+const ExperienceCategory = require("./experienceCategory");
+const ProjectSkill = require("./projectSkill");
 const Skill = require("./skill");
 const Experience = require("./experience");
-const ExperienceSkill = require("./experience_skill");
+const ExperienceSkill = require("./experienceSkill");
 const Award = require("./award");
 
 // === Projects ===
