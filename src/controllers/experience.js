@@ -1,4 +1,4 @@
-const { Experience } = require("../models/association");
+const { Experience, ExperienceCategory } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
 
@@ -26,7 +26,7 @@ const showExperiences = async (req, res) => {
         });
 
         res.render("experiences/list", {
-            isExperience: true,
+            isExperiences: true,
             experiences: plainExperiences,
         });
     } catch (error) {

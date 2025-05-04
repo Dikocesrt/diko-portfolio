@@ -1,0 +1,66 @@
+<nav class="w-full bg-primary-brown py-6">
+    {{!-- SMALL NAV --}}
+    <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5 md:hidden">
+        <div class="flex flex-row items-center justify-between">
+            <a href="/" class="uppercase font-germania font-regular text-[28px] text-white">DIKOCESRT.</a>
+            <svg id="dropdown-toggle" class="w-9 transition-transform hover:cursor-pointer  duration-500" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M20 7L4 7" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 12L4 12" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> <path d="M20 17L4 17" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+        </div>
+        <div id="nav-dropdown" class="hidden flex-col gap-y-5">
+            <a href="/" class="flex flex-col w-fit">
+                <p class="font-poppins font-semibold text-[16px] text-white">Home</p>
+                <div class="{{#if isFront}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <a href="/experiences" class="flex flex-col w-fit">
+                <p class="font-poppins font-semibold text-[16px] text-white">Experiences</p>
+                <div class="{{#if isExperiences}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <a href="/projects" class="flex flex-col w-fit">
+                <p class="font-poppins font-semibold text-[16px] text-white">Projects</p>
+                <div class="{{#if isProjects}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <a href="" class="flex flex-col w-fit">
+                <p class="font-poppins font-semibold text-[16px] text-white">About</p>
+                <div class="{{#if isAbout}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <div class="flex flex-row items-center justify-between">
+                <button class="w-fit flex flex-row items-center gap-x-2 px-6 py-2 bg-white shadow-lg rounded-[18px] hover:cursor-pointer hover:scale-105 duration-300">
+                    <svg class="w-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#957D70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487" stroke="#957D70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                    <p class="font-poppins font-semibold text-[18px] text-primary-brown">CV</p>
+                </button>
+                <div class="w-fit flex flex-row items-center gap-x-5">
+                    <a target="_blank" href="https://www.instagram.com/dikocesrt_/"><img src="/images/instagram.svg" class="w-10" alt=""></a>
+                    <a target="_blank" href="https://github.com/Dikocesrt"><img src="/images/github.svg" class="w-10" alt=""></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/dikocesrt/"><img src="/images/linkedin.svg" class="w-10" alt=""></a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    {{!-- LARGE NAV --}}
+    <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] md:flex flex-row items-center justify-between hidden">
+        <a href="/" class="uppercase font-germania font-regular text-[28px] lg:text-[32px] text-white">DIKOCESRT.</a>
+        <div class="flex flex-row items-center gap-x-4 lg:gap-x-8">
+            <a href="/" class="flex flex-col group w-fit">
+                <p class="font-poppins font-semibold text-[16px] lg:text-[20px] text-white {{#if isFront}} {{else}} hover:scale-105 duration-300 {{/if}}">Home</p>
+                <div class="{{#if isFront}} block {{else}} hidden {{/if}} border-b-2 w-[85%] border-white mx-auto"></div>
+            </a>
+            <a href="/experiences" class="flex flex-col group w-fit">
+                <p class="font-poppins font-semibold text-[16px] lg:text-[20px] text-white {{#if isExperiences}} {{else}} hover:scale-105 duration-300 {{/if}}">Experiences</p>
+                <div class="{{#if isExperiences}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <a href="/projects" class="flex flex-col group w-fit">
+                <p class="font-poppins font-semibold text-[16px] lg:text-[20px] text-white {{#if isProjects}} {{else}} hover:scale-105 duration-300 {{/if}}">Projects</p>
+                <div class="{{#if isProjects}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+            <a href="" class="flex flex-col group w-fit">
+                <p class="font-poppins font-semibold text-[16px] lg:text-[20px] text-white {{#if isAbout}} {{else}} hover:scale-105 duration-300 {{/if}}">About</p>
+                <div class="{{#if isAbout}} block {{else}} hidden {{/if}} border-b-2 border-white w-[85%] mx-auto"></div>
+            </a>
+        </div>
+        <button class="w-fit flex flex-row items-center gap-x-2 px-6 py-2 bg-white shadow-lg rounded-[18px] hover:cursor-pointer hover:scale-105 duration-300">
+            <svg class="w-7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 3V16M12 16L16 11.625M12 16L8 11.625" stroke="#957D70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M15 21H9C6.17157 21 4.75736 21 3.87868 20.1213C3 19.2426 3 17.8284 3 15M21 15C21 17.8284 21 19.2426 20.1213 20.1213C19.8215 20.4211 19.4594 20.6186 19 20.7487" stroke="#957D70" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <p class="font-poppins font-semibold text-[20px] text-primary-brown">CV</p>
+        </button>
+    </div>
+</nav>

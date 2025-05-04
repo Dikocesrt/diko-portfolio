@@ -1,0 +1,11 @@
+<script>
+    const svgToggle = document.getElementById('dropdown-toggle');
+    const dropdown = document.getElementById('nav-dropdown');
+
+    svgToggle.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+        dropdown.classList.toggle('flex');
+        svgToggle.classList.toggle('rotate-90');
+        svgToggle.classList.toggle('rotate-0');
+    });
+</script>

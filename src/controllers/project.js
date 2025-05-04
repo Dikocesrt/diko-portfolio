@@ -8,7 +8,7 @@ const sequelize = require("../configs/database");
 
 const showProjects = async (req, res) => {
     try {
-        let projects, isProject, experience;
+        let projects, isProjects, experience;
 
         if (req.params.id) {
             experience = await Experience.findOne({
@@ -31,7 +31,7 @@ const showProjects = async (req, res) => {
                 ],
             });
 
-            isProject = false;
+            isProjects = false;
         } else {
             projects = await Project.findAll({
                 order: [["created_at", "ASC"]],
@@ -44,7 +44,7 @@ const showProjects = async (req, res) => {
                 ],
             });
 
-            isProject = true;
+            isProjects = true;
         }
 
         const plainProjects = projects.map((project) =>
@@ -59,7 +59,7 @@ const showProjects = async (req, res) => {
 
         res.render("projects/list", {
             projects: plainProjects,
-            isProject,
+            isProjects,
             experience,
         });
     } catch (error) {

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-    --color-primary-pink: #ff7d6b;
+    --color-primary-brown: #957d70;
     --font-poppins: "Poppins", sans-serif;
+    --font-germania: "Germania One", cursive;
+    --font-federant: "Federant", cursive;
+    --font-coda: "Coda", cursive;
+    --font-charm: "Charm", cursive;
 }
