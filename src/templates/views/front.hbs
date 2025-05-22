@@ -9,9 +9,172 @@
         <link rel="stylesheet" href="/css/output.css" />
     </head>
     <body>
-        <div class="w-full min-h-screen">
             {{> navbar}}
-        </div>
+
+            {{!-- HERO --}}
+            <div class="w-full bg-primary-brown pb-6 lg:py-6">
+                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5">
+                    <div class="w-full flex flex-col gap-y-3 md:gap-y-5 md:relative">
+                        <div class="flex flex-col mx-auto lg:absolute left-0 top-0 xl:translate-y-1/12 z-10">
+                            <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[48px]">Hi <span class="text-secondary-brown">There</span>,</p>
+                            <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[34px] xl:text-[42px]">I'm Diko <span class="text-secondary-brown">Cesartista</span>.</p>
+                        </div>
+                        <img src="/images/hero.png" alt="" class="w-[75%] md:w-[50%] xl:w-[40%] mx-auto">
+                        <div class="flex-col gap-y-4 absolute z-10 top-1/4 lg:top-1/9 right-0 lg:right-1/15 hidden md:flex">
+                            <a target="_blank" href="https://www.instagram.com/dikocesrt_/"><img src="/images/instagram.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                            <a target="_blank" href="https://github.com/Dikocesrt"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                            <a target="_blank" href="https://www.linkedin.com/in/dikocesrt/"><img src="/images/linkedin.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                        </div>
+                        <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/4 left-0 hidden lg:flex">
+                            <p class="text-center text-[40px] text-white font-federant font-regular">&lt;CODER&gt;</p>
+                            <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, </p>
+                        </div>
+                        <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/7 right-1/25 hidden lg:flex">
+                            <p class="text-center text-[40px] text-white font-federant font-regular">FULLSTACK</p>
+                            <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- MOTTO --}}
+            <div class="w-full relative flex flex-col">
+                <div class="w-full bg-primary-brown h-[60px]"></div>
+                <div class="w-full bg-white h-[60px]"></div>
+                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex justify-center items-center bg-white rounded-[8px] absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 md:py-8 shadow-xl">
+                    <img src="/images/left-quote.svg" alt="" class="absolute z-20 left-0 top-0 w-13 lg:w-15 xl:w-[70px] -translate-x-1/3 -translate-y-1/2">
+                    <div class="flex flex-col md:hidden">
+                        <p class="font-pota text-[19px] text-center">Bersenang - senang dahulu</p>
+                        <p class="font-pota text-[19px]">Bersenang -senang kemudian</p>
+                    </div>
+                    <p class="font-pota text-[20px] lg:text-[24px] xl:text-[28px] hidden md:flex">Bersenang - senang dahulu, bersenang -senang kemudian</p>
+                    <img src="/images/right-quote.svg" alt="" class="absolute z-20 right-0 bottom-0 w-13 lg:w-15 xl:w-[70px] translate-x-1/3 translate-y-1/2">
+                </div>
+            </div>
+
+            {{!-- EDUCATION --}}
+            <div class="w-full bg-white py-24">
+                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5 lg:flex-row lg:gap-y-0 lg:justify-between">
+                    <div class="relative md:w-[75%] lg:w-[50%] lg:my-auto lg:mx-0 md:mx-auto h-fit">
+                        <div class="w-[93%] h-[93%] rounded-[18px] border-3 border-primary-brown absolute z-10 left-0 top-0"></div>
+                        <img src="/images/education.png" alt="" class="w-[93%] h-[93%] absolute z-20 right-0 bottom-0">
+                        <img src="/images/education.png" alt="" class="w-full h-full opacity-0 pointer-events-none">
+                    </div>
+                    <div class="flex flex-col gap-y-1 lg:w-[40%]">
+                        <p class="font-coda font-bold text-soft-black tracking-wider text-center text-[20px]">UNIVERSITAS AHMAD DAHLAN</p>
+                        <p class="font-charm font-bold text-soft-black text-center text-[20px]">2021-2025</p>
+                        <div class="border-b-3 border-primary-brown w-[85%] mx-auto rounded-[10px]"></div>
+                        <div class="flex flex-col gap-y-2">
+                            <div class="flex flex-row items-center gap-x-1">
+                                <img src="/images/star.svg" alt="" class="w-7">
+                                <p class="font-poppins font-medium text-[16px] text-soft-black">IPK : 3.83</p>
+                            </div>
+                            <p class="font-poppins font-regular text-[14px] xl:text-[16px] text-soft-gray text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer v</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {{!-- EXPERIENCES --}}
+            <div class="w-full bg-white pb-24">
+                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[36px] xl:text-[38px] text-center">EXPERIENCE</p>
+                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada </p>
+                    <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
+                            {{!-- CARD ITEM --}}
+                            <div class="flex flex-col rounded-[18px] shadow-md">
+                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
+                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
+
+                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
+                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
+                                    </div>
+
+                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
+                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
+                                    <div class="flex flex-row justify-between">
+                                        <div class="flex flex-col justify-between">
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
+                                        </div>
+                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-2 px-4">
+                                            <p class="font-poppins font-bold text-[14px] text-white">Detail</p>
+                                            <img src="/images/arrow.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col rounded-[18px] shadow-md">
+                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
+                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
+
+                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
+                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
+                                    </div>
+
+                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
+                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
+                                    <div class="flex flex-row justify-between">
+                                        <div class="flex flex-col justify-between">
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
+                                        </div>
+                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-2 px-4">
+                                            <p class="font-poppins font-bold text-[14px] text-white">Detail</p>
+                                            <img src="/images/arrow.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col rounded-[18px] shadow-md">
+                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
+                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
+
+                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
+                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
+                                    </div>
+
+                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
+                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
+                                    <div class="flex flex-row justify-between">
+                                        <div class="flex flex-col justify-between">
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
+                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
+                                        </div>
+                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-2 px-4">
+                                            <p class="font-poppins font-bold text-[14px] text-white">Detail</p>
+                                            <img src="/images/arrow.svg" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full bg-white pb-24">
+                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[36px] xl:text-[38px] text-center">PROJECT CATEGORY</p>
+                    <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 lg:items-stretch lg:gap-x-8">
+                        <div class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full">
+                            <img src="/images/mobile.svg" alt="" class="w-24 mx-auto">
+                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Mobile Developer</p>
+                        </div>
+                        <div class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full">
+                            <img src="/images/web.svg" alt="" class="w-24 mx-auto">
+                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Web Developer</p>
+                        </div>
+                        <div class="rounded-[18px] border border-primary-brown shadown-md flex flex-col p-8 justify-center items-center gap-y-4 w-full">
+                            <img src="/images/backend.svg" alt="" class="w-24 mx-auto">
+                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">BackEnd Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </body>
 
 

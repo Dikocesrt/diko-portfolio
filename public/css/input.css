@@ -2,9 +2,13 @@
 
 @theme {
     --color-primary-brown: #957d70;
+    --color-secondary-brown: #e2b298;
+    --color-soft-black: #444444;
+    --color-soft-gray: #b1adad;
     --font-poppins: "Poppins", sans-serif;
     --font-germania: "Germania One", cursive;
     --font-federant: "Federant", cursive;
     --font-coda: "Coda", cursive;
     --font-charm: "Charm", cursive;
+    --font-pota: "Potta One", cursive;
 }
