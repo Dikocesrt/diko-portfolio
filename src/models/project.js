@@ -20,6 +20,11 @@ const Project = sequelize.define(
             field: "is_star",
             defaultValue: false,
         },
+        githubLink: {
+            type: DataTypes.STRING,
+            field: "github_link",
+            allowNull: true,
+        },
         experienceId: {
             type: DataTypes.UUID,
             field: "experience_id",
