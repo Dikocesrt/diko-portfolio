@@ -6,7 +6,7 @@ const {
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
 
-const showProjects = async (req, res) => {
+const listProjects = async (req, res) => {
     try {
         let projects, isProjects, experience;
 
@@ -53,7 +53,7 @@ const showProjects = async (req, res) => {
 
         plainProjects.map((project) => {
             if (project.image) {
-                project.image = getURL(project.image, 400, 200);
+                project.image = getURL(project.image, 400, 400);
             }
         });
 
@@ -68,5 +68,5 @@ const showProjects = async (req, res) => {
 };
 
 module.exports = {
-    showProjects,
+    listProjects,
 };

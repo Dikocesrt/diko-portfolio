@@ -1,11 +1,16 @@
 const express = require("express");
 const router = express.Router();
 const { showFront } = require("../controllers/front");
-const { showProjects } = require("../controllers/project");
-const { showExperiences } = require("../controllers/experience");
+const { listProjects } = require("../controllers/project");
+const {
+    listExperiences,
+    detailExperience,
+    devShowDetail,
+} = require("../controllers/experience");
 
 router.get("/", showFront);
-router.get("/projects", showProjects);
-router.get("/experiences", showExperiences);
+router.get("/projects", listProjects);
+router.get("/experiences", listExperiences);
+router.get("/experiences/:id", devShowDetail);
 
 module.exports = router;
