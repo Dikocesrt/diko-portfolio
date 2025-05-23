@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
 const { showFront } = require("../controllers/front");
-const { listProjects } = require("../controllers/project");
+const {
+    listProjects,
+    devShowDetailProject,
+} = require("../controllers/project");
 const {
     listExperiences,
     detailExperience,
@@ -12,5 +15,6 @@ router.get("/", showFront);
 router.get("/projects", listProjects);
 router.get("/experiences", listExperiences);
 router.get("/experiences/:id", devShowDetail);
+router.get("/projects/:id", devShowDetailProject);
 
 module.exports = router;

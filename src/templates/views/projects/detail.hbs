@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diko's Experiences</title>
+    <title>Diko's Projects</title>
 
     {{> font}}
 
@@ -14,78 +14,32 @@
 
     <div class="w-full bg-white pt-12 pb-20">
         <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
-
-            {{!-- JUDUL --}}
-            <div class="flex flex-col">
-                <p class="font-poppins font-bold text-black text-[24px] lg:text-[26px] xl:text-[28px] uppercase">Alterra Academy Batch 6</p>
-                <p class="font-poppins font-medium text-soft-gray text-[12px] lg:text-[14px] xl:text-[16px]"><span class="uppercase">ALTERRA ACADEMY</span>, Desember 2024 - Mei 2025</p>
-            </div>
-
-            {{!-- IMAGE SMALL --}}
-            <div class="flex flex-col gap-y-3 lg:hidden">
-                <img src="/images/small-experience.png" alt="" class="rounded-[18px]">
-
-                <div class="flex flex-col p-6 rounded-[12px] border border-soft-gray gap-y-1 md:flex-row md:gap-x-12">
-                    <div class="flex flex-row gap-x-8">
-                        <div class="flex flex-col gap-y-1">
-                            <p class="font-poppins font-regular text-black text-[12px] md:text-[14px]">Posisi</p>
-                            <p class="font-poppins font-regular text-black text-[12px] md:text-[14px]">Lokasi</p>
-                            <p class="font-poppins font-regular text-black text-[12px] md:text-[14px]">Penempatan</p>
-                        </div>
-                        <div class="flex flex-col gap-y-1">
-                            <p class="font-poppins font-bold text-primary-brown text-[12px] md:text-[14px]">Backend Developer</p>
-                            <p class="font-poppins font-bold text-primary-brown text-[12px] md:text-[14px]">Online</p>
-                            <p class="font-poppins font-bold text-primary-brown text-[12px] md:text-[14px]">Remote</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-row gap-x-8">
-                        <div class="flex flex-col gap-y-1">
-                            <p class="font-poppins font-regular text-black text-[12px] md:text-[14px]">Skema</p>
-                            <p class="font-poppins font-regular text-black text-[12px] md:text-[14px]">Tipe Kegiatan</p>
-                        </div>
-                        <div class="flex flex-col gap-y-1">
-                            <p class="font-poppins font-bold text-primary-brown text-[12px] md:text-[14px]">Part-time</p>
-                            <p class="font-poppins font-bold text-primary-brown text-[12px] md:text-[14px]">MSIB</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="flex flex-row gap-x-3 items-center">
+                <p class="font-poppins font-bold text-black text-[24px] lg:text-[26px] xl:text-[28px] uppercase">Mental Guardians</p>
+                <a target="_blank" href="https://github.com/Dikocesrt" class="group"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14 group-hover:scale-110 duration-400" alt=""></a>
             </div>
             
-            {{!-- IMAGE LARGE --}}
-            <div class="hidden lg:flex relative mb-12">
-                <img src="/images/large-experience.png" alt="" class="rounded-[18px]">
-                <div class="bg-white lg:w-[90%] xl:w-[80%] flex flex-row items-center justify-evenly rounded-[18px] shadow-lg absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+            {{!-- IMAGE --}}
+            <div class="flex relative mb-12">
+                <img src="/images/large-project.png" alt="" class="rounded-[18px]">
+                <div class="bg-white w-[90%] xl:w-[80%] flex flex-row items-center justify-evenly rounded-[18px] shadow-lg absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
                     <div class="flex flex-col py-3">
-                        <p class="text-center font-poppins text-black text-[16px]">Posisi</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[16px]">Backend Developer</p>
+                        <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Kategori</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Capstone Project</p>
                     </div>
 
                     <div class="border-r border-black self-stretch"></div>
 
                     <div class="flex flex-col py-3">
-                        <p class="text-center font-poppins text-black text-[16px]">Lokasi</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[16px]">Online</p>
+                        <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Tipe</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Mobile</p>
                     </div>
 
                     <div class="border-r border-black self-stretch"></div>
 
                     <div class="flex flex-col py-3">
-                        <p class="text-center font-poppins text-black text-[16px]">Penempatan</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[16px]">Remote</p>
-                    </div>
-
-                    <div class="border-r border-black self-stretch"></div>
-
-                    <div class="flex flex-col py-3">
-                        <p class="text-center font-poppins text-black text-[16px]">Skema</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[16px]">Part-time</p>
-                    </div>
-
-                    <div class="border-r border-black self-stretch"></div>
-
-                    <div class="flex flex-col py-3">
-                        <p class="text-center font-poppins text-black text-[16px]">Tipe Kegiatan</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[16px]">MSIB</p>
+                        <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Tanggal</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Desember 2025</p>
                     </div>
                 </div>
             </div>
@@ -241,118 +195,34 @@
 
             {{!-- PROJECT --}}
             <div class="flex flex-col gap-y-2 mb-4">
-                <div class="flex flex-row gap-x-2 items-center">
-                    <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">PROJECTS</p>
-                    <a href="" class="hover:scale-110 duration-300"><img src="/images/view-all.svg" alt="" class="w-10 lg:w-11 xl:w-12"></a>
-                </div>
+                <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">DOCUMENTATIONS</p>
                 <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6">
                         {{!-- CARD ITEMS --}}
-                        <div class="relative rounded-[18px] group">
+                        <a href="" class="group" target="_blank">
+                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        </a>
 
-                            <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
+                        <a href="" class="group" target="_blank">
+                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        </a>
 
-                            <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                            </div>
+                        <a href="" class="group" target="_blank">
+                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        </a>
 
-                            <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                            </div>
+                        <a href="" class="group" target="_blank">
+                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        </a>
 
-                            <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                            <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                            </a>
-                        </div>
-
-                        <div class="relative rounded-[18px] group">
-
-                            <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
-
-                            <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                            </div>
-
-                            <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                            </div>
-
-                            <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                            <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                            </a>
-                        </div>
-
-                        <div class="relative rounded-[18px] group">
-
-                            <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
-
-                            <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                            </div>
-
-                            <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                            </div>
-
-                            <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                            <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex flex-col gap-y-2">
-                <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">AWARDS</p>
-                <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
-
-                        {{!-- CARD ITEMS --}}
-                        <div class="rounded-[18px] bg-white shadow-lg flex flex-col gap-y-2">
-                            <img src="/images/award.png" alt="" class="w-full">
-                            <div class="flex flex-col px-4 pb-4 gap-y-1">
-                                <div class="flex flex-col">
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">TOP 50 CAPSTONE PROJECT</p>
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">2025</p>
-                                </div>
-                                <p class="text-center font-poppins font-regular text-soft-gray text-[14px]">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                            </div>
-                        </div>
-
-                        <div class="rounded-[18px] bg-white shadow-lg flex flex-col gap-y-2">
-                            <img src="/images/award.png" alt="" class="w-full">
-                            <div class="flex flex-col px-4 pb-4 gap-y-1">
-                                <div class="flex flex-col">
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">TOP 50 CAPSTONE PROJECT</p>
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">2025</p>
-                                </div>
-                                <p class="text-center font-poppins font-regular text-soft-gray text-[14px]">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                            </div>
-                        </div>
-
-                        <div class="rounded-[18px] bg-white shadow-lg flex flex-col gap-y-2">
-                            <img src="/images/award.png" alt="" class="w-full">
-                            <div class="flex flex-col px-4 pb-4 gap-y-1">
-                                <div class="flex flex-col">
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">TOP 50 CAPSTONE PROJECT</p>
-                                    <p class="text-center font-poppins font-bold text-black text-[16px]">2025</p>
-                                </div>
-                                <p class="text-center font-poppins font-regular text-soft-gray text-[14px]">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
-                            </div>
-                        </div>
+                        <a href="" class="group" target="_blank">
+                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
 
     {{> navbarScript}}
 
