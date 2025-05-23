@@ -42,7 +42,8 @@ const Experience = sequelize.define(
                 "selfemployed",
                 "contract",
                 "internship",
-                "seasonal"
+                "seasonal",
+                "freelance"
             ),
             field: "employment_type",
         },
