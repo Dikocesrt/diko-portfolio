@@ -13,11 +13,11 @@
 
         <div class="w-full bg-white py-16">
             <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-8">
-                <p class="font-poppins font-bold text-black text-[32px] md:text-[36px] xl:text-[38px] uppercase">PROYEK SAYA</p>
+                <p class="font-poppins font-bold text-black text-[32px] md:text-[36px] xl:text-[38px] uppercase">PROYEK <span class="text-primary-brown">{{#if experience}}{{experience.name}}{{else}}{{#if type}}{{type}}{{else}}SAYA{{/if}}{{/if}}</span></p>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {{!-- CARD ITEMS --}}
                     {{#each projects}}
-                    <div class="relative rounded-[18px] group shadow-xl">
+                    <a href="/projects/{{this.id}}" class="relative rounded-[18px] group shadow-xl hover:cursor-default">
 
                         <img src="{{this.image}}" alt="" class="w-full h-full rounded-[18px]">
 
@@ -31,10 +31,10 @@
 
                         <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
 
-                        <a href="/projects/{{this.id}}" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
+                        <div class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300 hover:cursor-pointer">
                             <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                        </a>
-                    </div>
+                        </div>
+                    </a>
                     {{/each}}
                 </div>
             </div>

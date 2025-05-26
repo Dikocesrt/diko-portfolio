@@ -188,8 +188,14 @@
   .absolute {
     position: absolute;
   }
+  .fixed {
+    position: fixed;
+  }
   .relative {
     position: relative;
+  }
+  .sticky {
+    position: sticky;
   }
   .top-0 {
     top: calc(var(--spacing) * 0);
@@ -244,6 +250,12 @@
   }
   .z-40 {
     z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .z-\[9999\] {
+    z-index: 9999;
   }
   .container {
     width: 100%;
@@ -826,6 +838,20 @@
       }
     }
   }
+  .hover\:cursor-default {
+    &:hover {
+      @media (hover: hover) {
+        cursor: default;
+      }
+    }
+  }
+  .hover\:cursor-none {
+    &:hover {
+      @media (hover: hover) {
+        cursor: none;
+      }
+    }
+  }
   .hover\:cursor-pointer {
     &:hover {
       @media (hover: hover) {
@@ -971,6 +997,15 @@
   .md\:text-\[36px\] {
     @media (width >= 48rem) {
       font-size: 36px;
+    }
+  }
+  .md\:group-hover\:flex {
+    @media (width >= 48rem) {
+      &:is(:where(.group):hover *) {
+        @media (hover: hover) {
+          display: flex;
+        }
+      }
     }
   }
   .lg\:absolute {

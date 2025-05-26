@@ -13,5 +13,7 @@ router.get("/projects", listProjects);
 router.get("/experiences", listExperiences);
 router.get("/experiences/:id", detailExperience);
 router.get("/projects/:id", detailProject);
+router.get("/experiences/:id/projects", listProjects);
+router.get("/project-types/:type/projects", listProjects);
 
 module.exports = router;

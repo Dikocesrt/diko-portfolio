@@ -54,6 +54,9 @@ const showFront = async (req, res) => {
 
         const skills = await Skill.findAll({
             order: sequelize.random(),
+            where: {
+                isStar: true,
+            },
             limit: 16,
         });
 

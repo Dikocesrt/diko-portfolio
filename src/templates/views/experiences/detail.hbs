@@ -153,7 +153,7 @@
             <div class="flex flex-col gap-y-2 mb-4">
                 <div class="flex flex-row gap-x-2 items-center">
                     <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">PROJECTS</p>
-                    <a href="" class="hover:scale-110 duration-300"><img src="/images/view-all.svg" alt="" class="w-10 lg:w-11 xl:w-12"></a>
+                    <a href="/experiences/{{experience.id}}/projects" class="hover:scale-110 duration-300"><img src="/images/view-all.svg" alt="" class="w-10 lg:w-11 xl:w-12"></a>
                 </div>
                 <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
@@ -213,13 +213,13 @@
 
     {{> navbarScript}}
 
-    <script>
+    {{!-- <script>
         window.addEventListener('DOMContentLoaded', () => {
             const scrollParents = document.querySelectorAll('.scroll-start');
             scrollParents.forEach(scrollEl => {
                 scrollEl.scrollLeft = (scrollEl.scrollWidth - scrollEl.clientWidth) / 2.5;
             });
         });
-    </script>
+    </script> --}}
 </body>
 </html>

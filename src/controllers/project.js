@@ -11,6 +11,7 @@ const sequelize = require("../configs/database");
 
 const listProjects = async (req, res) => {
     try {
+        let type;
         let projects, isProjects, experience;
 
         if (req.params.id) {
@@ -34,6 +35,23 @@ const listProjects = async (req, res) => {
                 ],
             });
 
+            isProjects = false;
+        } else if (req.params.type) {
+            projects = await Project.findAll({
+                order: [["created_at", "ASC"]],
+                where: {
+                    type: req.params.type,
+                },
+                include: [
+                    {
+                        model: ProjectCategory,
+                        as: "category",
+                        attributes: ["name"],
+                    },
+                ],
+            });
+
+            type = req.params.type;
             isProjects = false;
         } else {
             projects = await Project.findAll({
@@ -64,6 +82,7 @@ const listProjects = async (req, res) => {
             projects: plainProjects,
             isProjects,
             experience,
+            type,
         });
     } catch (error) {
         console.log("SHOW PROJECTS ERROR => " + error);
@@ -162,10 +181,6 @@ const detailProject = async (req, res) => {
     } catch (error) {
         console.log("SHOW PROJECT ERROR => " + error);
     }
-};
-
-const devShowDetailProject = async (req, res) => {
-    res.render("projects/detail");
 };
 
 module.exports = {
