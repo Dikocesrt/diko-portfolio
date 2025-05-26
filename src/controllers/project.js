@@ -4,6 +4,7 @@ const {
     ProjectSkill,
     Experience,
     Documentation,
+    Skill,
 } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
@@ -55,7 +56,7 @@ const listProjects = async (req, res) => {
 
         plainProjects.map((project) => {
             if (project.image) {
-                project.image = getURL(project.image, 400, 400);
+                project.image = getURL(project.image, 400, 230);
             }
         });
 
@@ -105,6 +106,10 @@ const detailProject = async (req, res) => {
 
         const plainProject = project.get({ plain: true });
 
+        if (plainProject.image) {
+            plainProject.image = getURL(plainProject.image, 1300, 680);
+        }
+
         const hardskills = plainProject.projectSkills.filter(
             (item) => item.skill?.category === "hardskill"
         );
@@ -119,9 +124,31 @@ const detailProject = async (req, res) => {
         plainProject.softskills = softskills.map((item) => item.skill);
         plainProject.softwareskills = softwareskills.map((item) => item.skill);
 
-        if (plainProject.image) {
-            plainProject.largeImage = getURL(plainProject.image, 1300, 680);
-            plainProject.smallImage = getURL(plainProject.image, 350, 180);
+        plainProject.hardskills.forEach((hardskill) => {
+            if (hardskill.image) {
+                hardskill.image = getURL(hardskill.image, 50, 50);
+            }
+        });
+
+        plainProject.softskills.forEach((softskill) => {
+            if (softskill.image) {
+                softskill.image = getURL(softskill.image, 50, 50);
+            }
+        });
+
+        plainProject.softwareskills.forEach((softwareskill) => {
+            if (softwareskill.image) {
+                softwareskill.image = getURL(softwareskill.image, 50, 50);
+            }
+        });
+
+        const skillLength =
+            plainProject.hardskills.length +
+            plainProject.softskills.length +
+            plainProject.softwareskills.length;
+
+        if (skillLength > 0) {
+            plainProject.hasSkills = true;
         }
 
         const documentations = plainProject.documentations.map((item) =>
@@ -144,5 +171,4 @@ const devShowDetailProject = async (req, res) => {
 module.exports = {
     listProjects,
     detailProject,
-    devShowDetailProject,
 };

@@ -5,6 +5,7 @@ const {
     Skill,
     Project,
     Award,
+    ProjectCategory,
 } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
@@ -66,7 +67,15 @@ const detailExperience = async (req, res) => {
                 {
                     model: Project,
                     as: "projects",
-                    attributes: ["id", "name"],
+                    attributes: ["id", "name", "image"],
+                    limit: 3,
+                    include: [
+                        {
+                            model: ProjectCategory,
+                            as: "category",
+                            attributes: ["name"],
+                        },
+                    ],
                 },
                 {
                     model: Award,
@@ -111,6 +120,39 @@ const detailExperience = async (req, res) => {
             );
         }
 
+        plainExperience.projects.forEach((project) => {
+            if (project.image) {
+                project.image = getURL(project.image, 400, 230);
+            }
+        });
+
+        plainExperience.hardskills.forEach((hardskill) => {
+            if (hardskill.image) {
+                hardskill.image = getURL(hardskill.image, 50, 50);
+            }
+        });
+
+        plainExperience.softskills.forEach((softskill) => {
+            if (softskill.image) {
+                softskill.image = getURL(softskill.image, 50, 50);
+            }
+        });
+
+        plainExperience.softwareskills.forEach((softwareskill) => {
+            if (softwareskill.image) {
+                softwareskill.image = getURL(softwareskill.image, 50, 50);
+            }
+        });
+
+        const skillLength =
+            plainExperience.hardskills.length +
+            plainExperience.softskills.length +
+            plainExperience.softwareskills.length;
+
+        if (skillLength > 0) {
+            plainExperience.hasSkills = true;
+        }
+
         res.render("experiences/detail", {
             experience: plainExperience,
         });
@@ -126,6 +168,5 @@ const devShowDetail = async (req, res) => {
 
 module.exports = {
     listExperiences,
-    devShowDetail,
     detailExperience,
 };

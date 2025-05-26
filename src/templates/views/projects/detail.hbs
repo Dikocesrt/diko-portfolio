@@ -15,212 +15,109 @@
     <div class="w-full bg-white pt-12 pb-20">
         <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
             <div class="flex flex-row gap-x-3 items-center">
-                <p class="font-poppins font-bold text-black text-[24px] lg:text-[26px] xl:text-[28px] uppercase">Mental Guardians</p>
-                <a target="_blank" href="https://github.com/Dikocesrt" class="group"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14 group-hover:scale-110 duration-400" alt=""></a>
+                <p class="font-poppins font-bold text-black text-[24px] lg:text-[26px] xl:text-[28px] uppercase">{{project.name}}</p>
+                <a target="_blank" href="{{project.githubLink}}" class="group"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14 group-hover:scale-110 duration-400" alt=""></a>
             </div>
             
             {{!-- IMAGE --}}
             <div class="flex relative mb-12">
-                <img src="/images/large-project.png" alt="" class="rounded-[18px]">
+                <img src="{{project.image}}" alt="" class="rounded-[18px] shadow-lg">
                 <div class="bg-white w-[90%] xl:w-[80%] flex flex-row items-center justify-evenly rounded-[18px] shadow-lg absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
                     <div class="flex flex-col py-3">
                         <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Kategori</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Capstone Project</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px] capitalize">{{project.category.name}}</p>
                     </div>
 
                     <div class="border-r border-black self-stretch"></div>
 
                     <div class="flex flex-col py-3">
                         <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Tipe</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Mobile</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px] uppercase">{{project.type}}</p>
                     </div>
 
                     <div class="border-r border-black self-stretch"></div>
 
                     <div class="flex flex-col py-3">
                         <p class="text-center font-poppins text-black text-[12px] lg:text-[16px]">Tanggal</p>
-                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px]">Desember 2025</p>
+                        <p class="text-center font-poppins font-bold text-primary-brown text-[12px] lg:text-[16px] capitalize">{{project.date}}</p>
                     </div>
                 </div>
             </div>
 
-            <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] text-soft-black text-justify leading-8 tracking-wide">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus a posuere tincidunt, nisl nunc facilisis nulla, at malesuada lacus est at ante. Integer vulputate purus vitae nisl tincidunt, nec malesuada est feugiat.</p>
+            <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] text-soft-black text-justify leading-8 tracking-wide">{{project.description}}</p>
 
             {{!-- SKILL --}}
+            {{#if project.hasSkills}}
             <div class="flex flex-col gap-y-2 mb-4">
                 <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">SKILL</p>
                 <div class="flex flex-col gap-y-3">
+                    {{#if project.hardskills.length}}
                     <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0">
-                        <div class="md:w-[40%] xl:w-[30%]">
+                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
                             <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Tech Stack</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                            {{#each project.hardskills}}
                             <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
+                                <img src="{{this.image}}" alt="" class="w-8 xl:w-12 rounded-full">
+                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">{{this.name}}</p>
                             </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
+                            {{/each}}
                         </div>
                     </div>
+                    {{/if}}
 
+                    {{#if project.softskills.length}}
                     <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0">
-                        <div class="md:w-[40%] xl:w-[30%]">
+                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
                             <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Softskills</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                            {{#each project.softskills}}
                             <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
+                                <img src="{{this.image}}" alt="" class="w-8 xl:w-12 rounded-full">
+                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">{{this.name}}</p>
                             </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
+                            {{/each}}
                         </div>
                     </div>
+                    {{/if}}
 
-                    <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0">
-                        <div class="md:w-[40%] xl:w-[30%]">
+                    {{#if project.softwareskills.length}}
+                    <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0 w-full">
+                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
                             <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Tools</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                            {{#each project.softwareskills}}
                             <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
+                                <img src="{{this.image}}" alt="" class="w-8 xl:w-12 rounded-full">
+                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">{{this.name}}</p>
                             </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
+                            {{/each}}
                         </div>
                     </div>
+                    {{/if}}
                 </div>
             </div>
+            {{/if}}
 
-            {{!-- PROJECT --}}
+            {{!-- DOCUMENTATION --}}
+            {{#if project.documentations}}
             <div class="flex flex-col gap-y-2 mb-4">
                 <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">DOCUMENTATIONS</p>
                 <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6">
                         {{!-- CARD ITEMS --}}
-                        <a href="" class="group" target="_blank">
-                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
+                        {{#each project.documentations}}
+                        <a href="{{this.image}}" class="group" target="_blank">
+                            <img src="{{this.image}}" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
                         </a>
-
-                        <a href="" class="group" target="_blank">
-                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
-                        </a>
-
-                        <a href="" class="group" target="_blank">
-                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
-                        </a>
-
-                        <a href="" class="group" target="_blank">
-                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
-                        </a>
-
-                        <a href="" class="group" target="_blank">
-                            <img src="/images/documentation.png" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
-                        </a>
+                        {{/each}}
                     </div>
                 </div>
             </div>
+            {{/if}}
         </div>
     </div>
 

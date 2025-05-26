@@ -48,7 +48,7 @@ const showFront = async (req, res) => {
 
         plainProjects.map((project) => {
             if (project.image) {
-                project.image = getURL(project.image, 400, 400);
+                project.image = getURL(project.image, 400, 230);
             }
         });
 
