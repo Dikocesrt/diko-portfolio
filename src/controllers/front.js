@@ -1,4 +1,9 @@
-const { Experience, Project, Skill } = require("../models/association");
+const {
+    Experience,
+    Project,
+    Skill,
+    ProjectCategory,
+} = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
 
@@ -27,6 +32,13 @@ const showFront = async (req, res) => {
                 isStar: true,
             },
             order: sequelize.random(),
+            include: [
+                {
+                    model: ProjectCategory,
+                    as: "category",
+                    attributes: ["name"],
+                },
+            ],
             limit: 3,
         });
 
@@ -42,7 +54,7 @@ const showFront = async (req, res) => {
 
         const skills = await Skill.findAll({
             order: sequelize.random(),
-            limit: 14,
+            limit: 16,
         });
 
         const plainSkills = skills.map((skill) => skill.get({ plain: true }));
@@ -53,11 +65,16 @@ const showFront = async (req, res) => {
             }
         });
 
+        const firstEightSKills = plainSkills.slice(0, 8);
+        const lastEightSkills = plainSkills.slice(8, 16);
+
         res.render("front", {
             isFront: true,
             experiences: plainExperiences,
             projects: plainProjects,
             skills: plainSkills,
+            firstEightSKills: firstEightSKills,
+            lastEightSkills: lastEightSkills,
         });
     } catch (error) {
         console.log("SHOW FRONT ERROR ==> " + error);

@@ -9,357 +9,221 @@
         <link rel="stylesheet" href="/css/output.css" />
     </head>
     <body>
-            {{> navbar}}
+        {{> navbar}}
 
-            {{!-- HERO --}}
-            <div class="w-full bg-primary-brown pb-6 lg:py-6">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5">
-                    <div class="w-full flex flex-col gap-y-3 md:gap-y-5 md:relative">
-                        <div class="flex flex-col mx-auto lg:absolute left-0 top-0 xl:translate-y-1/12 z-10">
-                            <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[48px]">Halo <span class="text-secondary-brown">Semua</span>,</p>
-                            <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[34px] xl:text-[42px]">Saya Diko <span class="text-secondary-brown">Cesartista</span>.</p>
-                        </div>
-                        <img src="/images/hero.png" alt="" class="w-[75%] md:w-[50%] xl:w-[40%] mx-auto">
-                        <div class="flex-col gap-y-4 absolute z-10 top-1/4 lg:top-1/9 right-0 lg:right-1/15 hidden md:flex">
-                            <a target="_blank" href="https://www.instagram.com/dikocesrt_/"><img src="/images/instagram.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
-                            <a target="_blank" href="https://github.com/Dikocesrt"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
-                            <a target="_blank" href="https://www.linkedin.com/in/dikocesrt/"><img src="/images/linkedin.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
-                        </div>
-                        <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/4 left-0 hidden lg:flex">
-                            <p class="text-center text-[40px] text-white font-federant font-regular">&lt;CODER&gt;</p>
-                            <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Terbiasa menulis kode dengan berbagai bahasa pemrograman untuk menciptakan solusi yang efisien, rapi, dan dapat diandalkan.</p>
-                        </div>
-                        <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/7 right-1/25 hidden lg:flex">
-                            <p class="text-center text-[40px] text-white font-federant font-regular">FULLSTACK</p>
-                            <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Menguasai pengembangan frontend website, frontend mobile, dan backend untuk membangun aplikasi yang utuh dan terintegrasi.</p>
-                        </div>
+        {{!-- HERO --}}
+        <div class="w-full bg-primary-brown pb-6 lg:py-6">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5">
+                <div class="w-full flex flex-col gap-y-3 md:gap-y-5 md:relative">
+                    <div class="flex flex-col mx-auto lg:absolute left-0 top-0 xl:translate-y-1/12 z-10">
+                        <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[48px]">Halo <span class="text-secondary-brown">Semua</span>,</p>
+                        <p class="font-poppins font-bold text-[28px] md:text-[36px] text-white text-center lg:text-start lg:text-[34px] xl:text-[42px]">Saya Diko <span class="text-secondary-brown">Cesartista</span>.</p>
+                    </div>
+                    <img src="/images/hero.png" alt="" class="w-[75%] md:w-[50%] xl:w-[40%] mx-auto">
+                    <div class="flex-col gap-y-4 absolute z-10 top-1/4 lg:top-1/9 right-0 lg:right-1/15 hidden md:flex">
+                        <a target="_blank" href="https://www.instagram.com/dikocesrt_/"><img src="/images/instagram.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                        <a target="_blank" href="https://github.com/Dikocesrt"><img src="/images/github.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/dikocesrt/"><img src="/images/linkedin.svg" class="w-11 lg:w-12 xl:w-14" alt=""></a>
+                    </div>
+                    <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/4 left-0 hidden lg:flex">
+                        <p class="text-center text-[40px] text-white font-federant font-regular">&lt;CODER&gt;</p>
+                        <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Terbiasa menulis kode dengan berbagai bahasa pemrograman untuk menciptakan solusi yang efisien, rapi, dan dapat diandalkan.</p>
+                    </div>
+                    <div class="flex-col max-w-[300px] xl:max-w-[450px] absolute z-10 bottom-1/7 right-1/25 hidden lg:flex">
+                        <p class="text-center text-[40px] text-white font-federant font-regular">FULLSTACK</p>
+                        <p class="font-poppins font-regular text-[16px] text-secondary-brown text-justify">Menguasai pengembangan frontend website, frontend mobile, dan backend untuk membangun aplikasi yang utuh dan terintegrasi.</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            {{!-- MOTTO --}}
-            <div class="w-full relative flex flex-col">
-                <div class="w-full bg-primary-brown h-[60px]"></div>
-                <div class="w-full bg-white h-[60px]"></div>
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex justify-center items-center bg-white rounded-[8px] absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 md:py-8 shadow-xl">
-                    <img src="/images/left-quote.svg" alt="" class="absolute z-20 left-0 top-0 w-13 lg:w-15 xl:w-[70px] -translate-x-1/3 -translate-y-1/2">
-                    <div class="flex flex-col md:hidden">
-                        <p class="font-pota text-[19px] text-center">Bersenang - senang dahulu</p>
-                        <p class="font-pota text-[19px]">Bersenang -senang kemudian</p>
-                    </div>
-                    <p class="font-pota text-[20px] lg:text-[24px] xl:text-[28px] hidden md:flex">Bersenang - senang dahulu, bersenang -senang kemudian</p>
-                    <img src="/images/right-quote.svg" alt="" class="absolute z-20 right-0 bottom-0 w-13 lg:w-15 xl:w-[70px] translate-x-1/3 translate-y-1/2">
+        {{!-- MOTTO --}}
+        <div class="w-full relative flex flex-col">
+            <div class="w-full bg-primary-brown h-[60px]"></div>
+            <div class="w-full bg-white h-[60px]"></div>
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex justify-center items-center bg-white rounded-[8px] absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 md:py-8 shadow-xl">
+                <img src="/images/left-quote.svg" alt="" class="absolute z-20 left-0 top-0 w-13 lg:w-15 xl:w-[70px] -translate-x-1/3 -translate-y-1/2">
+                <div class="flex flex-col md:hidden">
+                    <p class="font-pota text-[19px] text-center">Bersenang - senang dahulu</p>
+                    <p class="font-pota text-[19px]">Bersenang -senang kemudian</p>
                 </div>
+                <p class="font-pota text-[20px] lg:text-[24px] xl:text-[28px] hidden md:flex">Bersenang - senang dahulu, bersenang -senang kemudian</p>
+                <img src="/images/right-quote.svg" alt="" class="absolute z-20 right-0 bottom-0 w-13 lg:w-15 xl:w-[70px] translate-x-1/3 translate-y-1/2">
             </div>
+        </div>
 
-            {{!-- EDUCATION --}}
-            <div class="w-full bg-white py-24">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5 lg:flex-row lg:gap-y-0 lg:justify-between">
-                    <div class="relative md:w-[75%] lg:w-[50%] lg:my-auto lg:mx-0 md:mx-auto h-fit">
-                        <div class="w-[93%] h-[93%] rounded-[18px] border-3 border-primary-brown absolute z-10 left-0 top-0"></div>
-                        <img src="/images/education.png" alt="" class="w-[93%] h-[93%] absolute z-20 right-0 bottom-0">
-                        <img src="/images/education.png" alt="" class="w-full h-full opacity-0 pointer-events-none">
-                    </div>
-                    <div class="flex flex-col gap-y-1 lg:w-[40%]">
-                        <p class="font-coda font-bold text-soft-black tracking-wider text-center text-[20px]">UNIVERSITAS AHMAD DAHLAN</p>
-                        <p class="font-charm font-bold text-soft-black text-center text-[20px]">2021-2025</p>
-                        <div class="border-b-3 border-primary-brown w-[85%] mx-auto rounded-[10px]"></div>
-                        <div class="flex flex-col gap-y-2">
-                            <div class="flex flex-row items-center gap-x-1">
-                                <img src="/images/star.svg" alt="" class="w-7">
-                                <p class="font-poppins font-medium text-[18px] text-soft-black">IPK : 3.83</p>
-                            </div>
-                            <p class="font-poppins font-regular text-[14px] xl:text-[16px] text-soft-gray text-justify">Saya merupakan lulusan Program Studi <span class="font-bold text-primary-brown">Sarjana Informatika</span> dari <span class="font-bold text-primary-brown">Universitas Ahmad Dahlan</span>, menempuh studi selama <span class="font-bold text-primary-brown">3,5 tahun (Agustus 2021 – Februari 2025)</span>. Selama masa perkuliahan, saya aktif sebagai <span class="font-bold text-primary-brown">asisten dosen</span> di berbagai mata kuliah sejak semester 3 hingga semester 6. Tugas saya mencakup <span class="font-bold text-primary-brown">mendampingi perkuliahan di kelas, membantu pembuatan soal ujian, hingga penginputan nilai mahasiswa</span>.
-                            
-                            <br><br>
-
-                            Selain itu, saya juga terpilih mengikuti <span class="font-bold text-primary-brown">Program MSIB (Magang dan Studi Independen Bersertifikat) sebanyak dua kali</span>. Pada <span class="font-bold text-primary-brown"> semester 5</span>, saya mengikuti program di <span class="font-bold text-primary-brown">Bangkit Academy sebagai Cloud and Backend Engineer</span>, di mana saya mendapatkan pelatihan intensif langsung dari para mentor ahli. Kemudian, pada <span class="font-bold text-primary-brown">semester 6</span>, saya melanjutkan program MSIB di <span class="font-bold text-primary-brown">Alterra Academy sebagai Backend Engineer with Golang</span>, yang memperdalam keterampilan saya dalam pengembangan backend berbasis industri.
-
-                            <br><br>
-
-                            Pada <span class="font-bold text-primary-brown">semester 7</span>, saya menyelesaikan skripsi berjudul <span class="font-bold text-primary-brown">“Rancang Bangun Aplikasi Mental Health Care Berbasis Mobile Menggunakan Metode Prototyping”</span>. Aplikasi ini dikembangkan menggunakan <span class="font-bold text-primary-brown">Kotlin</span> dengan arsitektur <span class="font-bold text-primary-brown">MVVM</span> untuk <span class="font-bold text-primary-brown">frontend</span>, dan <span class="font-bold text-primary-brown">Golang</span> dengan <span class="font-bold text-primary-brown">Clean Architecture</span> untuk <span class="font-bold text-primary-brown">backend</span>, yang saya pelajari selama program MSIB di <span class="font-bold text-primary-brown">Alterra Academy</span>. Proses <span class="font-bold text-primary-brown">deployment-nya</span> menggunakan <span class="font-bold text-primary-brown">Docker</span>, yang saya pelajari selama program MSIB di <span class="font-bold text-primary-brown">Bangkit Academy</span>.</p>
+        {{!-- EDUCATION --}}
+        <div class="w-full bg-white py-24">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-5 lg:flex-row lg:gap-y-0 lg:justify-between">
+                <div class="relative md:w-[75%] lg:w-[50%] lg:my-auto lg:mx-0 md:mx-auto h-fit">
+                    <div class="w-[93%] h-[93%] rounded-[18px] border-3 border-primary-brown absolute z-10 left-0 top-0"></div>
+                    <img src="/images/education.png" alt="" class="w-[93%] h-[93%] absolute z-20 right-0 bottom-0">
+                    <img src="/images/education.png" alt="" class="w-full h-full opacity-0 pointer-events-none">
+                </div>
+                <div class="flex flex-col gap-y-1 lg:w-[40%]">
+                    <p class="font-coda font-bold text-soft-black tracking-wider text-center text-[20px]">UNIVERSITAS AHMAD DAHLAN</p>
+                    <p class="font-charm font-bold text-soft-black text-center text-[20px]">2021-2025</p>
+                    <div class="border-b-3 border-primary-brown w-[85%] mx-auto rounded-[10px]"></div>
+                    <div class="flex flex-col gap-y-2">
+                        <div class="flex flex-row items-center gap-x-1">
+                            <img src="/images/star.svg" alt="" class="w-7">
+                            <p class="font-poppins font-medium text-[18px] text-soft-black">IPK : 3.83</p>
                         </div>
+                        <p class="font-poppins font-regular text-[14px] xl:text-[16px] text-soft-gray text-justify">Saya merupakan lulusan Program Studi <span class="font-bold text-primary-brown">Sarjana Informatika</span> dari <span class="font-bold text-primary-brown">Universitas Ahmad Dahlan</span>, menempuh studi selama <span class="font-bold text-primary-brown">3,5 tahun (Agustus 2021 – Februari 2025)</span>. Selama masa perkuliahan, saya aktif sebagai <span class="font-bold text-primary-brown">asisten dosen</span> di berbagai mata kuliah sejak semester 3 hingga semester 6. Tugas saya mencakup <span class="font-bold text-primary-brown">mendampingi perkuliahan di kelas, membantu pembuatan soal ujian, hingga penginputan nilai mahasiswa</span>.
+                        
+                        <br><br>
+
+                        Selain itu, saya juga terpilih mengikuti <span class="font-bold text-primary-brown">Program MSIB (Magang dan Studi Independen Bersertifikat) sebanyak dua kali</span>. Pada <span class="font-bold text-primary-brown"> semester 5</span>, saya mengikuti program di <span class="font-bold text-primary-brown">Bangkit Academy sebagai Cloud and Backend Engineer</span>, di mana saya mendapatkan pelatihan intensif langsung dari para mentor ahli. Kemudian, pada <span class="font-bold text-primary-brown">semester 6</span>, saya melanjutkan program MSIB di <span class="font-bold text-primary-brown">Alterra Academy sebagai Backend Engineer with Golang</span>, yang memperdalam keterampilan saya dalam pengembangan backend berbasis industri.
+
+                        <br><br>
+
+                        Pada <span class="font-bold text-primary-brown">semester 7</span>, saya menyelesaikan skripsi berjudul <span class="font-bold text-primary-brown">“Rancang Bangun Aplikasi Mental Health Care Berbasis Mobile Menggunakan Metode Prototyping”</span>. Aplikasi ini dikembangkan menggunakan <span class="font-bold text-primary-brown">Kotlin</span> dengan arsitektur <span class="font-bold text-primary-brown">MVVM</span> untuk <span class="font-bold text-primary-brown">frontend</span>, dan <span class="font-bold text-primary-brown">Golang</span> dengan <span class="font-bold text-primary-brown">Clean Architecture</span> untuk <span class="font-bold text-primary-brown">backend</span>, yang saya pelajari selama program MSIB di <span class="font-bold text-primary-brown">Alterra Academy</span>. Proses <span class="font-bold text-primary-brown">deployment-nya</span> menggunakan <span class="font-bold text-primary-brown">Docker</span>, yang saya pelajari selama program MSIB di <span class="font-bold text-primary-brown">Bangkit Academy</span>.</p>
                     </div>
                 </div>
             </div>
+        </div>
 
-            {{!-- EXPERIENCES --}}
-            <div class="w-full bg-white pb-24">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
-                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center uppercase">PENGALAMAN SAYA</p>
-                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Beberapa pengalaman <span class="font-bold text-primary-brown">praktikal</span> yang telah saya jalani selama <span class="font-bold text-primary-brown">kuliah</span> dan <span class="font-bold text-primary-brown">program magang</span>, yang memperkuat kesiapan saya untuk terjun ke <span class="font-bold text-primary-brown">dunia industri</span>.</p>
-                    <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
-                            {{!-- CARD ITEM --}}
-                            <div class="flex flex-col rounded-[18px] shadow-md">
-                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
-                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
+        {{!-- EXPERIENCES --}}
+        <div class="w-full bg-white pb-24">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center uppercase">PENGALAMAN SAYA</p>
+                <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Beberapa pengalaman <span class="font-bold text-primary-brown">praktikal</span> yang telah saya jalani selama <span class="font-bold text-primary-brown">kuliah</span> dan <span class="font-bold text-primary-brown">program magang</span>, yang memperkuat kesiapan saya untuk terjun ke <span class="font-bold text-primary-brown">dunia industri</span>.</p>
+                <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
+                    {{#if experiences.length}}
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
+                        {{#each experiences}}
+                        {{!-- CARD ITEM --}}
+                        <div class="flex flex-col rounded-[18px] shadow-md">
+                            <img src="{{this.image}}" alt="" class="w-full rounded-t-[18px]">
+                            <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
 
-                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
-                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
+                                <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
+                                    <p class="font-poppins font-semibold text-black text-[14px]">{{this.position}}</p>
+                                </div>
+
+                                <p class="uppercase font-poppins font-bold text-[18px]">{{this.name}}</p>
+                                <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">{{truncate this.description 90}}</p>
+                                <div class="flex flex-row justify-between">
+                                    <div class="flex flex-col justify-between">
+                                        <p class="font-poppins italic font-regular text-[14px] text-primary-brown">{{this.location}}</p>
+                                        <p class="font-poppins italic font-regular text-[14px] text-primary-brown">{{this.yearStart}}-{{this.yearEnd}}</p>
                                     </div>
-
-                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
-                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
-                                    <div class="flex flex-row justify-between">
-                                        <div class="flex flex-col justify-between">
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
-                                        </div>
-                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-3 px-4 hover:scale-105 duration-300">
-                                            <p class="font-poppins font-bold text-[14px] text-white">Selengkapnya</p>
-                                            <img src="/images/arrow.svg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col rounded-[18px] shadow-md">
-                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
-                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
-
-                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
-                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
-                                    </div>
-
-                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
-                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
-                                    <div class="flex flex-row justify-between">
-                                        <div class="flex flex-col justify-between">
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
-                                        </div>
-                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-3 px-4 hover:scale-105 duration-300">
-                                            <p class="font-poppins font-bold text-[14px] text-white">Selengkapnya</p>
-                                            <img src="/images/arrow.svg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-col rounded-[18px] shadow-md">
-                                <img src="/images/experience.png" alt="" class="w-full rounded-t-[18px]">
-                                <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
-
-                                    <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
-                                        <p class="font-poppins font-semibold text-black text-[14px]">Backend Developer</p>
-                                    </div>
-
-                                    <p class="uppercase font-poppins font-bold text-[18px]">Alterra Academy</p>
-                                    <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod, metus  .....</p>
-                                    <div class="flex flex-row justify-between">
-                                        <div class="flex flex-col justify-between">
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
-                                            <p class="font-poppins italic font-regular text-[14px] text-primary-brown">2024-2025</p>
-                                        </div>
-                                        <a href="" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-3 px-4 hover:scale-105 duration-300">
-                                            <p class="font-poppins font-bold text-[14px] text-white">Selengkapnya</p>
-                                            <img src="/images/arrow.svg" alt="">
-                                        </a>
-                                    </div>
+                                    <a href="/experiences/{{this.id}}" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-3 px-4 hover:scale-105 duration-300">
+                                        <p class="font-poppins font-bold text-[14px] text-white">Selengkapnya</p>
+                                        <img src="/images/arrow.svg" alt="">
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                        {{/each}}
                     </div>
+                    {{else}}
+                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Belum ada pengalaman yang tersimpan.</p>
+                    {{/if}}
                 </div>
             </div>
+        </div>
 
-            {{!-- PROJECT CATEGORY --}}
-            <div class="w-full bg-white pb-24">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6 lg:relative">
-                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center lg:text-start uppercase">Bidang Keahlian Saya</p>
-                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[50%] lg:mx-auto lg:text-justify lg:absolute z-10 left-0 top-1/8 text-soft-gray text-center">Saya membagi <span class="font-bold text-primary-brown" >proyek</span> yang saya kerjakan ke dalam <span class="font-bold text-primary-brown">beberapa kategori</span> sesuai dengan <span class="font-bold text-primary-brown">keahlian</span> yang saya bangun selama <span class="font-bold text-primary-brown">studi</span> dan <span class="font-bold text-primary-brown">pengalaman magang</span>.</p>
-                    <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 lg:items-start lg:gap-x-8">
-                        <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full hover:scale-105 duration-400 h-[250px] lg:mt-80">
-                            <img src="/images/mobile.svg" alt="" class="w-24 mx-auto">
-                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Mobile Developer</p>
-                        </a>
-                        <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full hover:scale-105 duration-400 h-[250px] lg:mt-40">
-                            <img src="/images/web.svg" alt="" class="w-24 mx-auto">
-                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Web Developer</p>
-                        </a>
-                        <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col p-8 justify-center items-center gap-y-4 w-full hover:scale-105 duration-400 h-[250px]">
-                            <img src="/images/backend.svg" alt="" class="w-24 mx-auto">
-                            <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">BackEnd Developer</p>
-                        </a>
-                    </div>
+        {{!-- PROJECT CATEGORY --}}
+        <div class="w-full bg-white pb-24">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6 lg:relative">
+                <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center lg:text-start uppercase">Bidang Keahlian Saya</p>
+                <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[50%] lg:mx-auto lg:text-justify lg:absolute z-10 left-0 top-1/8 text-soft-gray text-center">Saya membagi <span class="font-bold text-primary-brown" >proyek</span> yang saya kerjakan ke dalam <span class="font-bold text-primary-brown">beberapa kategori</span> sesuai dengan <span class="font-bold text-primary-brown">keahlian</span> yang saya bangun selama <span class="font-bold text-primary-brown">studi</span> dan <span class="font-bold text-primary-brown">pengalaman magang</span>.</p>
+                <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col lg:flex-row gap-y-8 lg:gap-y-0 lg:items-start lg:gap-x-8">
+                    <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full hover:scale-105 duration-400 h-[250px] lg:mt-80">
+                        <img src="/images/mobile.svg" alt="" class="w-24 mx-auto">
+                        <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Mobile Developer</p>
+                    </a>
+                    <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col justify-center items-center p-8 gap-y-4 w-full hover:scale-105 duration-400 h-[250px] lg:mt-40">
+                        <img src="/images/web.svg" alt="" class="w-24 mx-auto">
+                        <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">FrontEnd Web Developer</p>
+                    </a>
+                    <a href="" class="rounded-[18px] border border-primary-brown shadown-md flex flex-col p-8 justify-center items-center gap-y-4 w-full hover:scale-105 duration-400 h-[250px]">
+                        <img src="/images/backend.svg" alt="" class="w-24 mx-auto">
+                        <p class="font-poppins font-semibold text-soft-black text-[24px] text-center uppercase">BackEnd Developer</p>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            {{!-- PROJECTS --}}
-            <div class="w-full bg-white pb-24">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
-                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center uppercase">Portfolio Proyek</p>
-                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Proyek-proyek ini merepresentasikan <span class="font-bold text-primary-brown">perjalanan saya</span> dalam membangun <span class="font-bold text-primary-brown">solusi digital</span> melalui berbagai <span class="font-bold text-primary-brown">teknologi</span> dan <span class="font-bold text-primary-brown">pendekatan pengembangan</span>.</p>
-                    <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
-                        <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
-                            {{!-- CARD ITEMS --}}
-                            <div class="relative rounded-[18px] group">
+        {{!-- PROJECTS --}}
+        <div class="w-full bg-white pb-24">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center uppercase">Portfolio Proyek</p>
+                <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Proyek-proyek ini merepresentasikan <span class="font-bold text-primary-brown">perjalanan saya</span> dalam membangun <span class="font-bold text-primary-brown">solusi digital</span> melalui berbagai <span class="font-bold text-primary-brown">teknologi</span> dan <span class="font-bold text-primary-brown">pendekatan pengembangan</span>.</p>
+                <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
+                    {{#if projects.length}}
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
+                        {{#each projects}}
+                        {{!-- CARD ITEMS --}}
+                        <div class="relative rounded-[18px] group shadow-lg">
 
-                                <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
+                            <img src="{{this.image}}" alt="" class="w-full h-full rounded-[18px]">
 
-                                <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                    <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                                </div>
-
-                                <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                    <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                                </div>
-
-                                <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                                <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                    <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                                </a>
+                            <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-70 z-10 rounded-b-[18px] group-hover:hidden">
+                                <p class="font-poppins font-bold text-[16px] text-black uppercase">{{this.name}}</p>
                             </div>
 
-                            <div class="relative rounded-[18px] group">
-
-                                <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
-
-                                <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                    <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                                </div>
-
-                                <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                    <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                                </div>
-
-                                <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                                <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                    <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                                </a>
+                            <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
+                                <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">{{this.category.name}}</p>
                             </div>
 
-                            <div class="relative rounded-[18px] group">
+                            <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
 
-                                <img src="/images/project.jpeg" alt="" class="w-full h-full rounded-[18px]">
-
-                                <div class="w-full px-5 py-3 absolute bottom-0 left-0 bg-soft-white opacity-60 z-10 group-hover:hidden">
-                                    <p class="font-poppins font-bold text-[16px] text-black uppercase">Mental Guardians</p>
-                                </div>
-
-                                <div class="flex justify-center items-center rounded-[18px] shadow-md bg-white absolute z-20 top-4 right-4 p-3 group-hover:hidden">
-                                    <p class="font-poppins font-semibold text-[12px] text-soft-black uppercase">Capstone Project</p>
-                                </div>
-
-                                <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
-
-                                <a href="" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
-                                    <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                                </a>
-                            </div>
+                            <a href="/projects/{{this.id}}" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
+                                <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
+                            </a>
                         </div>
+                        {{/each}}
                     </div>
+                    {{else}}
+                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Belum ada proyek</p>
+                    {{/if}}
                 </div>
             </div>
+        </div>
 
-            {{!-- SKILLS --}}
-            <div class="w-full bg-white pb-24">
-                <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
-                    <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center lg:text-start uppercase">KEMAMPUAN SAYA</p>
-                    <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[50%] text-soft-gray text-center lg:text-justify">Berikut adalah <span class="font-bold text-primary-brown">keahlian utama</span> saya yang terbagi dalam tiga kategori yaitu <span class="font-bold text-primary-brown">Hard Skills</span>, <span class="font-bold text-primary-brown">Soft Skills</span>, dan <span class="font-bold text-primary-brown">Software Skills</span>. Keahlian ini saya kembangkan melalui <span class="font-bold text-primary-brown">studi akademik</span>, <span class="font-bold text-primary-brown">pengalaman industri</span>, dan <span class="font-bold text-primary-brown">proyek nyata</span>.</p>
-                    {{!-- WRAPPER --}}
-                    <div class="flex flex-col gap-y-4">
-                        {{!-- SCROLL PARENT 1 --}}
-                        <div class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
+        {{!-- SKILLS --}}
+        <div class="w-full bg-white pb-24">
+            <div class="w-full mx-auto max-w-[350px] md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px] flex flex-col gap-y-6">
+                <p class="font-federant font-regular underline  text-primary-brown text-[32px] lg:text-[40px] xl:text-[44px] text-center lg:text-start uppercase">KEMAMPUAN SAYA</p>
+                <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[50%] text-soft-gray text-center lg:text-justify">Berikut adalah <span class="font-bold text-primary-brown">keahlian utama</span> saya yang terbagi dalam tiga kategori yaitu <span class="font-bold text-primary-brown">Hard Skills</span>, <span class="font-bold text-primary-brown">Soft Skills</span>, dan <span class="font-bold text-primary-brown">Software Skills</span>. Keahlian ini saya kembangkan melalui <span class="font-bold text-primary-brown">studi akademik</span>, <span class="font-bold text-primary-brown">pengalaman industri</span>, dan <span class="font-bold text-primary-brown">proyek nyata</span>.</p>
+                {{!-- WRAPPER --}}
+                {{#if skills.length}}
+                <div class="flex flex-col gap-y-4">
+                    {{!-- SCROLL PARENT 1 --}}
+                    <div class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                        {{#each firstEightSKills}}
+                        <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
+                            <img src="{{this.image}}" alt="" class="w-8 xl:w-12 rounded-full">
+                            <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">{{this.name}}</p>
                         </div>
+                        {{/each}}
+                    </div>
 
-                        {{!-- SCROLL PARENT 2 --}}
-                        <div id="scroll-parent-2" class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
-
-                            <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
-                                <img src="/images/golang.svg" alt="" class="w-8 xl:w-12">
-                                <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">Golang</p>
-                            </div>
+                    {{!-- SCROLL PARENT 2 --}}
+                    <div id="scroll-parent-2" class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                        {{#each lastEightSkills}}
+                        <div class="flex flex-shrink-0 flex-row gap-x-3 items-center rounded-full border-3 border-primary-brown py-2 px-6">
+                            <img src="{{this.image}}" alt="" class="w-8 xl:w-12 rounded-full">
+                            <p class="font-poppins font-regular text-black text-[18px] xl:text-[20px]">{{this.name}}</p>
                         </div>
+                        {{/each}}
                     </div>
                 </div>
+                {{else}}
+                <p class="font-poppins font-regular text-[14px] lg:text-[16px] xl:text-[18px] lg:max-w-[80%] lg:mx-auto text-soft-gray text-center">Belum ada skills</p>
+                {{/if}}
             </div>
+        </div>
 
+        {{> navbarScript}}
 
-
-            {{> navbarScript}}
-
-            <script>
-                window.addEventListener('DOMContentLoaded', () => {
-                    const scrollParent2 = document.getElementById('scroll-parent-2');
-                    scrollParent2.scrollLeft = (scrollParent2.scrollWidth - scrollParent2.clientWidth) / 2.2;
-                });
-            </script>
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const scrollParent2 = document.getElementById('scroll-parent-2');
+                scrollParent2.scrollLeft = (scrollParent2.scrollWidth - scrollParent2.clientWidth) / 2.33;
+            });
+        </script>
     </body>
 </html>
