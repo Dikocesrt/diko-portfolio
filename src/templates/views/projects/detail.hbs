@@ -53,8 +53,8 @@
                 <div class="flex flex-col gap-y-3">
                     {{#if project.hardskills.length}}
                     <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0">
-                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
-                            <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Tech Stack</p>
+                        <div class="md:w-[200px] md:flex-shrink-0 md:basis-[200px]">
+                            <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Hard Skills</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
                             {{#each project.hardskills}}
@@ -69,8 +69,8 @@
 
                     {{#if project.softskills.length}}
                     <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0">
-                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
-                            <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Softskills</p>
+                        <div class="md:w-[200px] md:flex-shrink-0 md:basis-[200px]">
+                            <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Soft Skills</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
                             {{#each project.softskills}}
@@ -85,7 +85,7 @@
 
                     {{#if project.softwareskills.length}}
                     <div class="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4 md:gap-y-0 w-full">
-                        <div class="md:w-[200px] flex-shrink-0 basis-[200px]">
+                        <div class="md:w-[200px] md:flex-shrink-0 md:basis-[200px]">
                             <p class="font-federant font-regular text-black text-[24px] md:text-[22px] lg:text-[28px] xl:text-[32px]">Tools</p>
                         </div>
                         <div class="flex flex-row scroll-start gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
@@ -123,13 +123,13 @@
 
     {{> navbarScript}}
 
-    <script>
+    {{!-- <script>
         window.addEventListener('DOMContentLoaded', () => {
             const scrollParents = document.querySelectorAll('.scroll-start');
             scrollParents.forEach(scrollEl => {
                 scrollEl.scrollLeft = (scrollEl.scrollWidth - scrollEl.clientWidth) / 2.5;
             });
         });
-    </script>
+    </script> --}}
 </body>
 </html>

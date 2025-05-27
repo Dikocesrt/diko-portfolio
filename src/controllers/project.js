@@ -129,15 +129,15 @@ const detailProject = async (req, res) => {
             plainProject.image = getURL(plainProject.image, 1300, 680);
         }
 
-        const hardskills = plainProject.projectSkills.filter(
-            (item) => item.skill?.category === "hardskill"
-        );
-        const softskills = plainProject.projectSkills.filter(
-            (item) => item.skill?.category === "softskill"
-        );
-        const softwareskills = plainProject.projectSkills.filter(
-            (item) => item.skill?.category === "softwareskill"
-        );
+        const hardskills = plainProject.projectSkills
+            .filter((item) => item.skill?.category === "hardskill")
+            .slice(0, 10);
+        const softskills = plainProject.projectSkills
+            .filter((item) => item.skill?.category === "softskill")
+            .slice(0, 7);
+        const softwareskills = plainProject.projectSkills
+            .filter((item) => item.skill?.category === "softwareskill")
+            .slice(0, 7);
 
         plainProject.hardskills = hardskills.map((item) => item.skill);
         plainProject.softskills = softskills.map((item) => item.skill);

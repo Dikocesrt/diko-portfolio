@@ -80,7 +80,7 @@ const detailExperience = async (req, res) => {
                 {
                     model: Award,
                     as: "awards",
-                    attributes: ["id", "name"],
+                    attributes: ["id", "name", "year", "description"],
                 },
             ],
         });
@@ -91,15 +91,15 @@ const detailExperience = async (req, res) => {
 
         const plainExperience = experience.get({ plain: true });
 
-        const hardskills = plainExperience.experienceSkills.filter(
-            (item) => item.skill?.category === "hardskill"
-        );
-        const softskills = plainExperience.experienceSkills.filter(
-            (item) => item.skill?.category === "softskill"
-        );
-        const softwareskills = plainExperience.experienceSkills.filter(
-            (item) => item.skill?.category === "softwareskill"
-        );
+        const hardskills = plainExperience.experienceSkills
+            .filter((item) => item.skill?.category === "hardskill")
+            .slice(0, 10);
+        const softskills = plainExperience.experienceSkills
+            .filter((item) => item.skill?.category === "softskill")
+            .slice(0, 8);
+        const softwareskills = plainExperience.experienceSkills
+            .filter((item) => item.skill?.category === "softwareskill")
+            .slice(0, 8);
 
         plainExperience.hardskills = hardskills.map((item) => item.skill);
         plainExperience.softskills = softskills.map((item) => item.skill);
