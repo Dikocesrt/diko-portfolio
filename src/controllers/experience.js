@@ -9,6 +9,7 @@ const {
 } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
+const { marked } = require("marked");
 
 const listExperiences = async (req, res) => {
     try {
@@ -31,6 +32,10 @@ const listExperiences = async (req, res) => {
             if (experience.image) {
                 experience.image = getURL(experience.image, 400, 200);
             }
+        });
+
+        plainExperiences.map((experience) => {
+            experience.description = marked(experience.description);
         });
 
         res.render("experiences/list", {
@@ -153,6 +158,8 @@ const detailExperience = async (req, res) => {
             plainExperience.hasSkills = true;
         }
 
+        plainExperience.description = marked.parse(plainExperience.description);
+
         res.render("experiences/detail", {
             experience: plainExperience,
         });
@@ -160,10 +167,6 @@ const detailExperience = async (req, res) => {
         console.error("SHOW DETAIL ERROR =>", error);
         res.status(500).send("Internal Server Error");
     }
-};
-
-const devShowDetail = async (req, res) => {
-    res.render("experiences/detail");
 };
 
 module.exports = {

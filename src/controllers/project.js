@@ -8,6 +8,7 @@ const {
 } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
+const { marked } = require("marked");
 
 const listProjects = async (req, res) => {
     try {
@@ -174,6 +175,8 @@ const detailProject = async (req, res) => {
             getURL(item.image, 615, 400)
         );
         plainProject.documentations = documentations;
+
+        plainProject.description = marked.parse(plainProject.description);
 
         res.render("projects/detail", {
             project: plainProject,

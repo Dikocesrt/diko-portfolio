@@ -6,6 +6,7 @@ const {
 } = require("../models/association");
 const getURL = require("../helpers/getCloudinary");
 const sequelize = require("../configs/database");
+const { marked } = require("marked");
 
 const showFront = async (req, res) => {
     try {
@@ -25,6 +26,10 @@ const showFront = async (req, res) => {
             if (experience.image) {
                 experience.image = getURL(experience.image, 400, 200);
             }
+        });
+
+        plainExperiences.map((experience) => {
+            experience.description = marked.parse(experience.description);
         });
 
         const projects = await Project.findAll({

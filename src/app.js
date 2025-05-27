@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 const hbs = require("hbs");
 const router = require("./routes/route");
+const truncate = require("html-truncate");
 require("dotenv").config();
 require("./configs/database");
 
@@ -19,6 +20,16 @@ hbs.registerHelper("truncate", function (text, limit) {
     if (!text) return "";
     if (text.length <= limit) return text;
     return text.substring(0, limit) + "...";
+});
+hbs.registerHelper("truncateHtml", function (htmlContent, maxWords) {
+    const plainText = htmlContent.replace(/<[^>]*>/g, " ");
+    const words = plainText.split(/\s+/).filter(Boolean);
+
+    if (words.length <= maxWords) return htmlContent;
+
+    const truncatedPlainText = words.slice(0, maxWords).join(" ") + "...";
+
+    return truncate(htmlContent, truncatedPlainText.length);
 });
 
 const port = process.env.PORT || 3000;

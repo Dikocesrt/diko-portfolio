@@ -20,14 +20,17 @@
                     {{#each experiences}}
                     <div class="flex flex-col rounded-[18px] shadow-md">
                         <img src="{{this.image}}" alt="" class="w-full rounded-t-[18px]">
-                        <div class="bg-white px-3 pt-9 pb-3 flex flex-col gap-y-1 relative">
+                        <div class="bg-white px-3 pt-9 pb-3 flex flex-col justify-between relative rounded-b-[18px] h-full">
 
                             <div class="bg-white flex justify-center items-center px-3 py-4 shadow-lg rounded-[18px] absolute z-10 top-0 left-2 -translate-y-1/2">
                                 <p class="font-poppins font-semibold text-black text-[14px]">{{this.position}}</p>
                             </div>
 
-                            <p class="uppercase font-poppins font-bold text-[18px]">{{this.name}}</p>
-                            <p class="font-poppins font-light text-[14px] text-soft-gray mb-3">{{truncate this.description 90}}</p>
+                            <div class="flex flex-col gap-y-1">
+                                <p class="uppercase font-poppins font-bold text-[18px]">{{this.name}}</p>
+                                <div class="font-poppins font-light text-[14px] text-soft-gray mb-3">{{{truncateHtml this.description 12}}}</div>
+                            </div>
+                            
                             <div class="flex flex-row justify-between">
                                 <div class="flex flex-col justify-between">
                                     <p class="font-poppins italic font-regular text-[14px] text-primary-brown">Online</p>
