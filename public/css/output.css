@@ -362,9 +362,6 @@
   .flex-shrink-0 {
     flex-shrink: 0;
   }
-  .basis-\[200px\] {
-    flex-basis: 200px;
-  }
   .-translate-x-1\/2 {
     --tw-translate-x: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
