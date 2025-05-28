@@ -159,7 +159,7 @@
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-y-4 gap-x-8">
                         {{!-- CARD ITEMS --}}
                         {{#each experience.projects}}
-                        <div class="relative rounded-[18px] group shadow-lg">
+                        <a href="/projects/{{this.id}}" class="relative rounded-[18px] group shadow-lg hover:cursor-default">
 
                             <img src="{{this.image}}" alt="" class="w-full h-full rounded-[18px]">
 
@@ -173,10 +173,10 @@
 
                             <div class="w-full h-full absolute z-30 top-0 left-0 bg-soft-black opacity-60 rounded-[18px] hidden group-hover:flex"></div>
 
-                            <a href="/projects/{{this.id}}" class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300">
+                            <div class="w-[70%] mx-auto bg-primary-brown py-3 rounded-[12px] hidden justify-center items-center absolute z-40 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 group-hover:flex hover:scale-105 duration-300 hover:cursor-pointer">
                                 <p class="font-poppins font-bold text-white text-[24px] lg:text-[18px] xl:text-[20px] 2xl:text-[24px] uppercase">detail</p>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                         {{/each}}
                     </div>
                 </div>
