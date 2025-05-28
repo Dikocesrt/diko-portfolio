@@ -105,15 +105,47 @@
             {{!-- DOCUMENTATION --}}
             {{#if project.documentations}}
             <div class="flex flex-col gap-y-2 mb-4">
-                <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">DOCUMENTATIONS</p>
+                <p class="font-federant font-regular underline text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">DOCUMENTATIONS</p>
+
                 <div class="w-full mx-auto max-w-[350px] lg:max-w-4xl xl:max-w-6xl 2xl:max-w-[1300px]">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6">
-                        {{!-- CARD ITEMS --}}
-                        {{#each project.documentations}}
-                        <a href="{{this.image}}" class="group" target="_blank">
-                            <img src="{{this.image}}" alt="" class="rounded-[18px] w-full group-hover:scale-105 duration-400">
-                        </a>
-                        {{/each}}
+                    <!-- Carousel wrapper -->
+                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                        <div class="relative overflow-hidden rounded-lg h-165">
+                            {{#each project.documentations}}
+                            {{#if @first}}
+                                <img src="{{this.image}}" class="block w-full opacity-0 pointer-events-none" alt="documentation image">
+                            {{/if}}
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{this.image}}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="documentation image">
+                            </div>
+                            {{/each}}
+                        </div>
+
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                            {{#each project.documentations}}
+                            <button type="button" class="w-3 h-3 rounded-full" aria-label="Slide {{@index}}" data-carousel-slide-to="{{@index}}"></button>
+                            {{/each}}
+                        </div>
+
+                        <!-- Slider controls -->
+                        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        
+                        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -121,6 +153,7 @@
         </div>
     </div>
 
+    {{> flowbite}}
     {{> navbarScript}}
 
     {{!-- <script>

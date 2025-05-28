@@ -171,10 +171,12 @@ const detailProject = async (req, res) => {
             plainProject.hasSkills = true;
         }
 
-        const documentations = plainProject.documentations.map((item) =>
-            getURL(item.image, 615, 400)
+        plainProject.documentations = plainProject.documentations.map(
+            (item) => {
+                item.image = getURL(item.image, 1000, 450);
+                return item;
+            }
         );
-        plainProject.documentations = documentations;
 
         plainProject.description = marked.parse(plainProject.description);
 

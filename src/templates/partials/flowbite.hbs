@@ -1,0 +1,1 @@
+<script src="/js/flowbite.min.js"></script>
