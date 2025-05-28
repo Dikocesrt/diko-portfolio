@@ -109,7 +109,7 @@
                                 <div class="flex flex-row justify-between">
                                     <div class="flex flex-col justify-between">
                                         <p class="font-poppins italic font-regular text-[14px] text-primary-brown">{{this.location}}</p>
-                                        <p class="font-poppins italic font-regular text-[14px] text-primary-brown">{{this.yearStart}}-{{this.yearEnd}}</p>
+                                        <p class="font-poppins italic font-regular text-[14px] text-primary-brown">{{#ifEquals this.yearStart this.yearEnd}} {{this.yearStart}} {{else}} {{this.yearStart}}-{{this.yearEnd}} {{/ifEquals}}</p>
                                     </div>
                                     <a href="/experiences/{{this.id}}" class="flex flex-row justify-center items-center gap-x-1 bg-primary-brown rounded-[10px] py-3 px-4 hover:scale-105 duration-300">
                                         <p class="font-poppins font-bold text-[14px] text-white">Selengkapnya</p>

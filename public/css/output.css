@@ -272,9 +272,6 @@
   .mx-auto {
     margin-inline: auto;
   }
-  .mt-auto {
-    margin-top: auto;
-  }
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }

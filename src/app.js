@@ -31,6 +31,13 @@ hbs.registerHelper("truncateHtml", function (htmlContent, maxWords) {
 
     return truncate(htmlContent, truncatedPlainText.length);
 });
+hbs.registerHelper("ifEquals", function (v1, v2, options) {
+    if (v1 === v2) {
+        return options.fn(this);
+    } else {
+        return options.inverse(this);
+    }
+});
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
