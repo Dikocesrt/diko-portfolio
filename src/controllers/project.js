@@ -173,7 +173,7 @@ const detailProject = async (req, res) => {
 
         plainProject.documentations = plainProject.documentations.map(
             (item) => {
-                item.image = getURL(item.image, 1000, 450);
+                item.image = getURL(item.image, 600, 400);
                 return item;
             }
         );
