@@ -106,9 +106,9 @@
             {{#if project.documentations}}
             <div class="flex flex-col gap-y-2 mb-4">
                 <p class="font-federant font-regular underline  text-primary-brown text-[34px] lg:text-[40px] xl:text-[44px] text-start">DOCUMENTATIONS</p>
-                <div class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar">
+                <div class="flex flex-row gap-x-4 overflow-x-auto scroll-smooth snap-x snap-mandatory hide-scrollbar p-4">
                     {{#each project.documentations}}
-                        <img src="{{this.image}}" alt="" class="rounded-[18px]">
+                        <img src="{{this.image}}" alt="" class="rounded-[18px] border border-gray-300 hover:scale-105 duration-400">
                     {{/each}}
                 </div>
             </div>

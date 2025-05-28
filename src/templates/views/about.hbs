@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diko's Profile</title>
+
+    {{> font}}
+    
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body onload="adjustHeight()">
+    {{> navbar}}
+
+    <div id="mainContent" class="flex justify-center items-center">
+        <p class="font-poppins font-bold text-primary-brown text-[24px] text-center">
+            HALAMAN INI LAGI PROSES PEMBUATAN <br> 
+            LAGIAN KEPO BANGET SIH TENTANG AKU<br>😎😎😎
+        </p>
+    </div>
+
+    <script>
+        function adjustHeight() {
+            const navbar = document.querySelector('nav'); // pastikan navbar pakai <nav>
+            const content = document.getElementById('mainContent');
+            const navHeight = navbar.offsetHeight;
+            content.style.height = `calc(100vh - ${navHeight}px)`;
+        }
+    </script>
+</body>
+</html>

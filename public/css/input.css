@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-@import "flowbite/src/themes/default";
-@plugin "flowbite/plugin";
-@source "../../node_modules/flowbite";
-
 @theme {
     --color-primary-brown: #957d70;
     --color-secondary-brown: #e2b298;

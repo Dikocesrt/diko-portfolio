@@ -15,5 +15,8 @@ router.get("/experiences/:id", detailExperience);
 router.get("/projects/:id", detailProject);
 router.get("/experiences/:id/projects", listProjects);
 router.get("/project-types/:type/projects", listProjects);
+router.get("/about", async (req, res) => {
+    res.render("about");
+});
 
 module.exports = router;
